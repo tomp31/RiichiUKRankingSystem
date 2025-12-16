@@ -91,7 +91,7 @@ MERS has been in use for almost 10 years, and was the result of collaboration be
 Good results are effectively 'double counted' in MERS. A good result pushes up both a player's part A and part B scores.
 ​
 
-A bad result only brings down the part B score - and, if the player has played enough, doesn't affect the ranking at all.
+A bad result only brings down the part A score - and, if the player has played enough, doesn't affect the ranking at all.
 ​
 
 Therefore, attending more tournaments is _usually_ a good idea in MERS.
