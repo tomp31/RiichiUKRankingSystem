@@ -231,10 +231,16 @@ Instead of imperfect implementations of estimates of opponent skill, all hanchan
 ​
 
 We acknowledge that it would be desirable to consider opponent skill, but this requires significant effort to track. We hope that treating all hanchan equally is a simple fix which is no less viable than the existing implementation of MERS.
-​
 
-## An explanation of RUKRS
-​
+### Don't decay results, except after they're used for selections
+
+Instead of a sliding 2-year timeframe of decay, just drop results completely after they are used for one selection. (This is tracked separately for ERMC and WRC.)
+
+
+Therefore, all tournaments count equally, and towards exactly one selection (per tournament type) only.​
+
+
+## An explanation of RUKRS​
 ### RUKRS results
 ​
 When you finish a tournament, you receive some results to contribute to your RUKRS ranking.
