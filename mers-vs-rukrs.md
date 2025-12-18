@@ -212,10 +212,12 @@ At the other end of the scale, the same thing can happen when deciding which res
 ## Introducing RUKRS
 
 ​
-The Riichi UK Ranking System aims to resemble and iterate on MERS, maintaining its good aspects, while aiming to improve on some of its shortcomings.
+The Riichi UK Ranking System aims to resemble and iterate on MERS.
+
+The sections are divided into aspects from MERS to **keep** and aspects from MERS to **change** in order to highlight the differences.
 ​
 
-### Keep rewarding peaks and suppressing troughs
+### Keep: rewarding peaks and suppressing troughs
 
 ​
 The UKMA wishes to encourage the growth of mahjong across the UK.
@@ -227,7 +229,7 @@ We generally want to make it attractive to our players to play as many tournamen
 By promising to highlight a player's achievements and forgive occasional spots of bad luck, we encourage our players to keep chasing to better their skills.
 ​
 
-### Keep paying more attention to longer tournaments
+### Keep: paying more attention to longer tournaments
 
 ​
 It makes sense that a test of your skills over more hanchan matters more.
@@ -236,15 +238,7 @@ It makes sense that a test of your skills over more hanchan matters more.
 Longer tournaments should continue to count more than shorter ones.
 ​
 
-### Don't try to estimate opponent skill
-
-​
-Instead of imperfect implementations of estimates of opponent skill, all hanchan are considered equally.
-​
-
-It would be desirable to consider opponent skill, but this requires significant effort to track. We hope that treating all hanchan equally is a simple fix which is no less viable than the existing implementation of MERS.
-
-### Focus on amount of play, not just number of tournaments
+### Change: Focus on amount of play, not just number of tournaments
 
 MERS is often interested in how many tournaments you have attended.
 
@@ -252,7 +246,15 @@ But each tournament has a different length. A fixed number of tournaments can re
 
 Instead, RUKRS is interested in how many hanchan you have played. This is expressed either as the actual number of hanchan, or the number of days of tournament play you have completed (which is very similar).
 
-### Don't decay results, except after they're used for selections
+### Change: Don't try to estimate opponent skill
+
+​
+Instead of imperfect implementations of estimates of opponent skill, all play is considered equally.
+​
+
+It would be desirable to consider opponent skill, but this requires significant effort to track. We hope that treating all play equally is a simple fix which is no less viable than the existing implementation of MERS.
+
+### Change: Don't decay results, except after they're used for selections
 
 Instead of a sliding 2-year timeframe of decay, just drop results completely after they are used for one selection. (This is tracked separately for ERMC and WRC.)
 
