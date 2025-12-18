@@ -16,7 +16,7 @@ For those who are interested, let's start by recapping how MERS rankings are cal
 ### MERS results
 
 ​
-In MERS, your result at every tournament is a value between 0 and 1000.
+In MERS, your performance at each tournament is recorded as a value between 0 and 1000.
 ​
 
 The winner of the tournament gets 1000, last place gets 0, and every other position is evenly spaced.
@@ -76,7 +76,7 @@ These parts are both weighted averages of certain sub-selections of your results
 Part A is the weighted average of all of your results.
 ​
 
-Additionally, a player with at least 10, 15, 20... results can leave their worst 1, 2, 3... results out of this calculation.
+However, a player with at least 10, 15, 20... results can leave their worst 1, 2, 3... results out of this calculation.
 ​
 
 ### Part B - Your achievements
