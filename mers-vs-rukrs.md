@@ -1,4 +1,5 @@
 # A proposal for a UK ranking system for riichi mahjong to inform selections for major international events
+
 ​
 Please note that this document only attempts to address riichi mahjong.
 ​
@@ -7,11 +8,13 @@ At time of writing, the UK lacks a lively competitive scene for the MCR ruleset.
 ​
 
 ## A re-explanation of MERS
+
 ​
-For those who are interested, let's start by recapping how MERS rankings are calculated. Those who could do without the gory, mathematical detail are welcome to skip to "An examination of MERS".
+For those who are interested, let's start by recapping how MERS rankings are calculated. Those who could do without the detail are welcome to skip to "An examination of MERS".
 ​
 
 ### MERS results
+
 ​
 In MERS, your result at every tournament is a number between 0 and 1000.
 ​
@@ -23,6 +26,7 @@ For example: if you finish 32nd out of 60, then you beat 28 out of your 59 oppon
 ​
 
 ### MERS weights
+
 ​
 Every result you achieve has a weight, determined by the tournament at which you achieve it.
 ​
@@ -34,14 +38,16 @@ The weight of a tournament is determined by four factors. A tournament has more 
 1. had more players;
 1. had players from more countries; or
 1. required qualification (which only applies to the European Championships (ERMC)).
-​
+   ​
 
 ### Weight decay
+
 ​
 Results older than a year have their weight halved. Results older than two years no longer count.
 ​
 
 ### New/inactive players
+
 ​
 MERS requests that players register at least 5 results to give a representative ranking.
 ​
@@ -53,6 +59,7 @@ Each of these virtual results is a 0 (corresponding to last place) with weight 1
 ​
 
 ### The two parts of the MERS ranking
+
 ​
 A player's MERS ranking is calculated in two parts.
 ​
@@ -64,6 +71,7 @@ These parts are both weighted averages of certain sub-selections of your results
 ​
 
 ### Part A - Your consistency
+
 ​
 Part A is the weighted average of all of your results.
 ​
@@ -72,21 +80,25 @@ Additionally, a player with at least 10, 15, 20... results can leave their worst
 ​
 
 ### Part B - Your achievements
+
 ​
 Part B is the weighted average of your four best results.
 ​
 
 ### The MERS ranking
+
 ​
 A player's final MERS ranking is the average of their Part A and Part B.
 ​
 
 ## An examination of MERS
+
 ​
 MERS has been in use for almost 10 years, and was the result of collaboration between many EMA member organisations. While it's difficult to track down the reasons for every piece of the system's design, we can examine its rammifications and try to make some inferences about its goals.
 ​
 
 ### MERS rewards peaks and suppresses troughs
+
 ​
 Good results are effectively 'double counted' in MERS. A good result pushes up both a player's part A and part B scores.
 ​
@@ -98,6 +110,7 @@ Therefore, attending more tournaments is _usually_ a good idea in MERS.
 ​
 
 ### MERS pays more attention to longer tournaments
+
 ​
 Longer tournaments have more weight.
 ​
@@ -120,6 +133,7 @@ Winning at these events can be seen as more difficult, and are rewarded accordin
 ​
 
 ### ...but the definition of 'hard to win' is implemented crudely...
+
 ​
 The component of the weight to do with representation of different countries might also be seen as trying to identify tournaments which are 'hard to win'. After all, more countries represented should in theory mean more playstyles to overcome.
 ​
@@ -137,6 +151,7 @@ It's difficult to properly judge this without examining the ranking of the playe
 ​
 
 ### ...and MERS pays just as much attention to losses at such events
+
 ​
 Even if the increase in weight for certain tournaments is trying to identify tournaments which are 'hard to win', no effort is made to account for the fact that said tournaments would also then be 'easy to lose'.
 ​
@@ -148,6 +163,7 @@ This leads to perhaps the most famous quirk of MERS, where many players feel dis
 ​
 
 ### MERS is volatile
+
 ​
 Ranking decay is very common across games and sports, and MERS implements this by reducing the weight of results with a certain age.
 ​
@@ -159,6 +175,7 @@ In fact, almost all countries only use MERS (if at all) twice every three years,
 ​
 
 ### Even MERS's intricate systems sometimes don't function as expected
+
 ​
 While admittedly edge cases, there are times where the selection of results for part A and part B can generate scores which are not the highest possible.
 ​
@@ -173,7 +190,6 @@ Consider a player with these contrived results:
 | 1000   | 1      |
 | 501    | 6      |
 | 500    | 1      |
-
 
 This player's part A score is the weighted average of all their results, which is 650.6.
 ​
@@ -194,19 +210,13 @@ At the other end of the scale, the same thing can happen when deciding which res
 ​
 
 ## Introducing RUKRS
+
 ​
 The Riichi UK Ranking System aims to resemble and iterate on MERS, maintaining its good aspects, while aiming to improve on some of its shortcomings.
 ​
 
-### Focus on average hanchan scores
-​
-Instead of introducing an abstract result from 0 to 1000, RUKRS focuses on your average hanchan score.
-​
-
-It is hoped that this is a more tangible number to reason about.
-​
-
 ### Keep rewarding peaks and suppressing troughs
+
 ​
 The UKMA wishes to encourage the growth of mahjong across the UK.
 ​
@@ -218,44 +228,61 @@ By promising to highlight a player's achievements and forgive occasional spots o
 ​
 
 ### Keep paying more attention to longer tournaments
+
 ​
 It makes sense that a test of your skills over more hanchan matters more.
 ​
 
-Longer tournaments have more hanchan, so these naturally contribute more to your average hanchan score.
+Longer tournaments should continue to count more than shorter ones.
 ​
 
 ### Don't try to estimate opponent skill
+
 ​
 Instead of imperfect implementations of estimates of opponent skill, all hanchan are considered equally.
 ​
 
 We acknowledge that it would be desirable to consider opponent skill, but this requires significant effort to track. We hope that treating all hanchan equally is a simple fix which is no less viable than the existing implementation of MERS.
 
+### Focus on amount of play, not just number of tournaments
+
+MERS is often interested in how many tournaments you have attended.
+
+But each tournament has a different length. A fixed number of tournaments can represent varying amounts of play. This leads to some of the unusual results described above.
+
+Instead, RUKRS is interested in how many hanchan you have played. This is expressed either as the actual number of hanchan, or the number of days of tournament play you have completed (which is very similar).
+
 ### Don't decay results, except after they're used for selections
 
 Instead of a sliding 2-year timeframe of decay, just drop results completely after they are used for one selection. (This is tracked separately for ERMC and WRC.)
 
-
 Therefore, all tournaments count equally, and towards exactly one selection (per tournament type) only.​
 
-
 ## An explanation of RUKRS​
+
+Two options have been identified for RUKRS. Both are presented here.
+
 ### RUKRS results
-​
+
+
 When you finish a tournament, you receive some results to contribute to your RUKRS ranking.
 ​
 
-The number of results is equal to the number of hanchan in the tournament.
+The number of results is equal to either:
+- Option 1: the number of days in the tournament
+- Option 2: the number of hanchan in the tournament
 ​
 
-The results are all equal to your average hanchan score in the tournament.
+The results are all equal to:
+- Option 1: your MERS score in the tournament (0 to 1000)
+- Option 2: your average hanchan score in the tournament
 ​
 
-Please note: individual hanchan results do not matter; only your average hanchan score for a whole tournament (in any case, EMA tournament results are only required to include the total score, so this would not be easily trackable).
+Note for Option 2: individual hanchan results would not matter; only your average hanchan score for a whole tournament (in any case, EMA tournament results are only required to include the total score, not individual hanchan results, so this would not be easily trackable).
 ​
 
 ### Result decay
+
 ​
 Results older than the date when selections were made for the previous tournament of the type being selected for, no longer count.
 ​
@@ -267,17 +294,23 @@ For example, selections for ERMC 2030 will not consider results achieved before 
 ​
 
 ### New/inactive players
+
 ​
-RUKRS requests that players play at least 50 hanchan to give a representative ranking.
+RUKRS requests that players play, to give a representative ranking, at least:
+- Option 1: 10 days of play
+- Option 2: 50 hanchan
 ​
 
-Players with fewer than 50 hanchan are given 'virtual' results until they have 50 results.
+Players with fewer than the above numbers are given 'virtual' results until they have the minimum number.
 ​
 
-Each of these virtual results is -30,000.
+Each of these virtual results is:
+- Option 1: 0
+- Option 2: -30,000
 ​
 
 ### The two parts of the RUKRS ranking
+
 ​
 A player's RUKRS ranking is calculated in two parts.
 ​
@@ -286,18 +319,23 @@ These parts are both averages of certain sub-selections of your results.
 ​
 
 ### Part A - Your consistency
+
 ​
 Part A is the average of the top 90% of your results, rounded up.
 ​
 
-For example, a player with between 50 and 59 results may ignore their lowest 5 results.
+For example, in Option 2, a player with between 50 and 59 results may ignore their lowest 5 results.
 ​
 
 ### Part B - Your achievements
+
 ​
-Part B is the average of your 30 best results.
+Part B is the average of your:
+- Option 1: 8 best results
+- Option 1: 30 best results
 ​
 
 ### The RUKRS ranking
+
 ​
 A player's final RUKRS ranking is the average of their Part A and Part B.
