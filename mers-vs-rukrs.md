@@ -338,11 +338,11 @@ Consider a player with the following results:
 
 | Tournament length in days | Number of hanchan | MERS score | Average hanchan score |
 | ------------------------- | ----------------- | ---------- | --------------------- |
-| 3                         | 8                 | 550        | +500                  |
+| 3                         | 13                | 550        | +500                  |
 | 2                         | 9                 | 850        | +11500                |
 | 2                         | 7                 | 300        | -4000                 |
 | 3                         | 12                | 900        | +12000                |
-| 2                         | 13                | 400        | -1000                 |
+| 2                         | 8                 | 400        | -1000                 |
 | 1                         | 4                 | 600        | +1500                 |
 
 Recall that each result is repeated the same number of times as there are days or hanchan in the tournament.
@@ -376,4 +376,4 @@ The calculations have the following results:
 | Option  | Part A counted results | Part B counted results | Part A | Part B | RUKRS score |
 | ------- | ---------------------- | ---------------------- | ------ | ------ | ----------- |
 | Days    | 12                     | 8                      | 645.83 | 762.5  | 704.17      |
-| Hanchan | 48                     | 30                     | +8533  | +4927  | +6730       |
+| Hanchan | 48                     | 30                     | +5083  | +8533  | +6808       |
