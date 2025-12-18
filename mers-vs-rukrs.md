@@ -332,7 +332,7 @@ For example, in Option 2, a player with between 50 and 59 results may ignore the
 ​
 Part B is the average of your:
 - Option 1: 8 best results
-- Option 1: 30 best results
+- Option 2: 30 best results
 ​
 
 ### The RUKRS ranking
