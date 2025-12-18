@@ -347,7 +347,7 @@ Consider a player with the following results:
 
 Recall that each result is repeated the same number of times as there are days or hanchan in the tournament.
 
-Following the 'days' model, the player's list of RUKRS results looks like this:
+Following the 'days' option, the player's list of RUKRS results looks like this:
 
 | Result | Counts for Part A | Counts for Part B |
 | ------ | ----------------- | ----------------- |
@@ -369,16 +369,11 @@ The top 8 results count for part B.
 
 The top 90% of results (rounded up) count for part A, that is, the bottom 10% (rounded down) don't count. This player has 13 results, so only the single worst result doesn't count.
 
-Part A is thus the average of the top 12 results: 645.83.
+In the 'hanchan' option, each average hanchan score would be repeated the number of times as there were hanchan in the tournament. Since this player has played 53 hanchan, part A would be the average of the top (90% \* 53) = 48 results.
 
-Part B is the average of the top 8 results: 762.5.
+The calculations have the following results:
 
-The final RUKRS score is halfway between the two: 704.17.
-
-Option 2 has a similar calculation. Each average hanchan score would be repeated the number of times as there were hanchan in the tournament.
-
-Part B is the average of the top 30 results: +8533.
-
-Since this player has played 53 hanchan, part A would be the average of the top (90% \* 53) = 48 results: +4927.
-
-The final RUKRS score is halfway between the two: +6730.
+| Option  | Part A counted results | Part B counted results | Part A | Part B | RUKRS score |
+| ------- | ---------------------- | ---------------------- | ------ | ------ | ----------- |
+| Days    | 12                     | 8                      | 645.83 | 762.5  | 704.17      |
+| Hanchan | 48                     | 30                     | +8533  | +4927  | +6730       |
