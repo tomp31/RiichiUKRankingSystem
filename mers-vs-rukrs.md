@@ -347,7 +347,7 @@ Consider a player with the following results:
 
 Recall that each result is repeated the same number of times as there are days or hanchan in the tournament.
 
-In Option 1, the player's list of RUKRS results looks like this:
+Following the 'days' model, the player's list of RUKRS results looks like this:
 
 | Result | Counts for Part A | Counts for Part B |
 | ------ | ----------------- | ----------------- |
