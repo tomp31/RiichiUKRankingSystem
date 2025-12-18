@@ -16,7 +16,7 @@ For those who are interested, let's start by recapping how MERS rankings are cal
 ### MERS results
 
 ​
-In MERS, your result at every tournament is a number between 0 and 1000.
+In MERS, your result at every tournament is a value between 0 and 1000.
 ​
 
 The winner of the tournament gets 1000, last place gets 0, and every other position is evenly spaced.
@@ -46,16 +46,16 @@ The weight of a tournament is determined by four factors. A tournament has more 
 Results older than a year have their weight halved. Results older than two years no longer count.
 ​
 
-### New/inactive players
+### Minimum participation
 
 ​
-MERS requests that players register at least 5 results to give a representative ranking.
+To give a representative ranking, MERS has a minimum participation of 5 tournaments.
 ​
 
-Players with fewer than 5 results are given 'virtual' results until they have 5 results.
+Players with fewer than 5 results are given placeholder results until they have 5 results.
 ​
 
-Each of these virtual results is a 0 (corresponding to last place) with weight 1.
+Each of these placeholder results is a 0 (corresponding to last place) with weight 1.
 ​
 
 ### The two parts of the MERS ranking
@@ -288,7 +288,7 @@ For example, selections for ERMC 2030 will not consider results achieved before 
 (Exceptions will be made for the first set of selections occurring immediately after RUKRS is introduced.)
 ​
 
-### New/inactive players
+### Minimum participation
 
 ​
 To give a representative ranking, RUKRS requests a **minimum participation**:
