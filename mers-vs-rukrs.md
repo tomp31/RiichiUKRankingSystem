@@ -168,7 +168,7 @@ This leads to perhaps the most famous quirk of MERS, where many players feel dis
 Ranking decay is very common across games and sports, and MERS implements this by reducing the weight of results with a certain age.
 ​
 
-However, the implementation is once again quite crude. The immediate halving of weights or dropping of results as soon as they cross an age threshold means that a player's ranking can change quite a lot even just between one day and the next.
+However, the implementation is by immediately halving weights or dropping results as soon as they cross an age threshold. This means that a player's ranking can change quite a lot even just between one day and the next, without the player having played.
 ​
 
 In fact, almost all countries only use MERS (if at all) twice every three years, to select players for European and World Championships. So it can be questioned whether ranking decay is really appropriate outside of this timescale.
