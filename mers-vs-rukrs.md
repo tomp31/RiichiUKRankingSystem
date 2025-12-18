@@ -350,19 +350,20 @@ Recall that each result is repeated the same number of times as there are days o
 In Option 1, the player's list of RUKRS results looks like this:
 
 | Result | Counts for Part A | Counts for Part B |
-| 900 | Yes | Yes |
-| 900 | Yes | Yes |
-| 900 | Yes | Yes |
-| 850 | Yes | Yes |
-| 850 | Yes | Yes |
-| 600 | Yes | Yes |
-| 550 | Yes | Yes |
-| 550 | Yes | Yes |
-| 550 | Yes | No |
-| 400 | Yes | No |
-| 400 | Yes | No |
-| 300 | Yes | No |
-| 300 | No | No |
+| ------ | ----------------- | ----------------- |
+| 900    | Yes               | Yes               |
+| 900    | Yes               | Yes               |
+| 900    | Yes               | Yes               |
+| 850    | Yes               | Yes               |
+| 850    | Yes               | Yes               |
+| 600    | Yes               | Yes               |
+| 550    | Yes               | Yes               |
+| 550    | Yes               | Yes               |
+| 550    | Yes               | No                |
+| 400    | Yes               | No                |
+| 400    | Yes               | No                |
+| 300    | Yes               | No                |
+| 300    | No                | No                |
 
 The top 8 results count for part B.
 
