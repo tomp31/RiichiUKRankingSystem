@@ -132,7 +132,7 @@ ERMC has even higher weight.
 Winning at these events can be seen as more difficult, and are rewarded accordingly.
 ​
 
-### ...but the definition of 'hard to win' is implemented crudely...
+### ...but 'hard to win' is tough to define...
 
 ​
 The component of the weight to do with representation of different countries might also be seen as trying to identify tournaments which are 'hard to win'. After all, more countries represented should in theory mean more playstyles to overcome.
@@ -242,7 +242,7 @@ Longer tournaments should continue to count more than shorter ones.
 Instead of imperfect implementations of estimates of opponent skill, all hanchan are considered equally.
 ​
 
-We acknowledge that it would be desirable to consider opponent skill, but this requires significant effort to track. We hope that treating all hanchan equally is a simple fix which is no less viable than the existing implementation of MERS.
+It would be desirable to consider opponent skill, but this requires significant effort to track. We hope that treating all hanchan equally is a simple fix which is no less viable than the existing implementation of MERS.
 
 ### Focus on amount of play, not just number of tournaments
 
@@ -264,19 +264,12 @@ Two options have been identified for RUKRS. Both are presented here.
 
 ### RUKRS results
 
+Upon completing a tournament, your performance is recorded as a set of results that contribute to your RUKRS ranking. These results are calculated based on one of two proposed methods:
 
-When you finish a tournament, you receive some results to contribute to your RUKRS ranking.
-​
-
-The number of results is equal to either:
-- Option 1: the number of days in the tournament
-- Option 2: the number of hanchan in the tournament
-​
-
-The results are all equal to:
-- Option 1: your MERS score in the tournament (0 to 1000)
-- Option 2: your average hanchan score in the tournament
-​
+| Metric              | Option 1 ('Days')               | Option 2 ('Hanchan')           |
+| ------------------- | ------------------------------- | ------------------------------ |
+| Quantity of results | Total number of tournament days | Total number of hanchan played |
+| Value of results    | MERS base score (0 to 1000)     | Average hanchan score          |
 
 Note for Option 2: individual hanchan results would not matter; only your average hanchan score for a whole tournament (in any case, EMA tournament results are only required to include the total score, not individual hanchan results, so this would not be easily trackable).
 ​
@@ -296,26 +289,22 @@ For example, selections for ERMC 2030 will not consider results achieved before 
 ### New/inactive players
 
 ​
-RUKRS requests that players play, to give a representative ranking, at least:
-- Option 1: 10 days of play
-- Option 2: 50 hanchan
-​
+To give a representative ranking, RUKRS requests a **minimum participation**:
 
-Players with fewer than the above numbers are given 'virtual' results until they have the minimum number.
-​
+|                       | Days    | Hanchan    |
+| --------------------- | ------- | ---------- |
+| Minimum participation | 10 days | 50 hanchan |
 
-Each of these virtual results is:
-- Option 1: 0
-- Option 2: -30,000
-​
+Players who have not yet met these thresholds are given **placeholder results** until the minimum is reached. Placeholder results have a set value:
+
+|                          | Days | Hanchan |
+| ------------------------ | ---- | ------- |
+| Placeholder result value | 0    | -30,000 |
 
 ### The two parts of the RUKRS ranking
 
 ​
 A player's RUKRS ranking is calculated in two parts.
-​
-
-These parts are both averages of certain sub-selections of your results.
 ​
 
 ### Part A - Your consistency
@@ -324,18 +313,69 @@ These parts are both averages of certain sub-selections of your results.
 Part A is the average of the top 90% of your results, rounded up.
 ​
 
-For example, in Option 2, a player with between 50 and 59 results may ignore their lowest 5 results.
+For example, a player with between 50 and 59 results may ignore their lowest 5 results.
 ​
 
 ### Part B - Your achievements
 
 ​
-Part B is the average of your:
-- Option 1: 8 best results
-- Option 1: 30 best results
-​
+Part B is the average of a quantity of your best results:
+
+|                            | Days | Hanchan |
+| -------------------------- | ---- | ------- |
+| \# best results for part B | 8    | 30      |
 
 ### The RUKRS ranking
 
 ​
 A player's final RUKRS ranking is the average of their Part A and Part B.
+
+## Worked example
+
+Consider a player with the following results:
+
+| Tournament length in days | Number of hanchan | MERS score | Average hanchan score |
+| ------------------------- | ----------------- | ---------- | --------------------- |
+| 3                         | 8                 | 550        | +500                  |
+| 2                         | 9                 | 850        | +11500                |
+| 2                         | 7                 | 300        | -4000                 |
+| 3                         | 12                | 900        | +12000                |
+| 2                         | 13                | 400        | -1000                 |
+| 1                         | 4                 | 600        | +1500                 |
+
+Recall that each result is repeated the same number of times as there are days or hanchan in the tournament.
+
+In Option 1, the player's list of RUKRS results looks like this:
+
+| Result | Counts for Part A | Counts for Part B |
+| 900 | Yes | Yes |
+| 900 | Yes | Yes |
+| 900 | Yes | Yes |
+| 850 | Yes | Yes |
+| 850 | Yes | Yes |
+| 600 | Yes | Yes |
+| 550 | Yes | Yes |
+| 550 | Yes | Yes |
+| 550 | Yes | No |
+| 400 | Yes | No |
+| 400 | Yes | No |
+| 300 | Yes | No |
+| 300 | No | No |
+
+The top 8 results count for part B.
+
+The top 90% of results (rounded up) count for part A, that is, the bottom 10% (rounded down) don't count. This player has 13 results, so only the single worst result doesn't count.
+
+Part A is thus the average of the top 12 results: 645.83.
+
+Part B is the average of the top 8 results: 762.5.
+
+The final RUKRS score is halfway between the two: 704.17.
+
+Option 2 has a similar calculation. Each average hanchan score would be repeated the number of times as there were hanchan in the tournament.
+
+Part B is the average of the top 30 results: +8533.
+
+Since this player has played 53 hanchan, part A would be the average of the top (90% \* 53) = 48 results: +4927.
+
+The final RUKRS score is halfway between the two: +6730.
