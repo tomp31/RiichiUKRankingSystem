@@ -287,7 +287,7 @@ The results have a value equal to the player's base rank (0 to 1000) at the tour
 
 The key difference from MERS is that the results are unweighted.
 
-Instead, the result is **duplicated** a number of times equal to the **number of days** in the tournament.​
+Instead, the result is **duplicated** until there are as many results as there are **days in the tournament**.​
 
 ### Result decay
 
