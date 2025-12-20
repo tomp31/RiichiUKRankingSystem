@@ -10,10 +10,10 @@ At time of writing, the UK lacks a lively competitive scene for the MCR ruleset.
 ## A re-explanation of MERS
 
 ​
-For those who are interested, let's start by recapping how MERS rankings are calculated. Those who could do without the detail are welcome to skip to "An examination of MERS".
+Let's start by recapping how MERS rankings are calculated.
 ​
 
-### MERS results
+### Base ranks
 
 ​
 In MERS, your performance at each tournament is recorded as a value between 0 and 1000.
@@ -25,10 +25,10 @@ The winner of the tournament gets 1000, last place gets 0, and every other posit
 For example: if you finish 32nd out of 60, then you beat 28 out of your 59 opponents. 28 divided by 59 is 0.475, so your MERS result would be 475.
 ​
 
-### MERS weights
+### Weights
 
 ​
-Every result you achieve has a weight, determined by the tournament at which you achieve it.
+Every tournament has a weight, which is applied to the results.
 ​
 
 The weight of a tournament is determined by four factors. A tournament has more weight if it:
@@ -40,7 +40,7 @@ The weight of a tournament is determined by four factors. A tournament has more 
 1. required qualification (which only applies to the European Championships (ERMC)).
    ​
 
-### Weight decay
+### Result decay
 
 ​
 Results older than a year have their weight halved. Results older than two years no longer count.
@@ -94,7 +94,7 @@ A player's final MERS ranking is the average of their Part A and Part B.
 ## An examination of MERS
 
 ​
-MERS has been in use for almost 10 years, and was the result of collaboration between many EMA member organisations. While it's difficult to track down the reasons for every piece of the system's design, we can examine its rammifications and try to make some inferences about its goals.
+MERS has been in use for many years, and was the result of collaboration between many EMA member organisations. While it's difficult to track down the reasons for every piece of the system's design, we can examine its rammifications and try to make some inferences about its goals.
 ​
 
 ### MERS rewards peaks and suppresses troughs
@@ -107,7 +107,16 @@ A bad result only brings down the part A score - and, if the player has played e
 ​
 
 Therefore, attending more tournaments is _usually_ a good idea in MERS.
-​
+
+### MERS lets almost all play affect the ranking
+
+In contrast, and in balance, with the above point, MERS doesn't suppress troughs _too much_.
+
+Only players with 10 results or more get to ignore any of their worst results, and even then, it's not very many (the limit is 20%).
+
+This means that almost all players in an EMA tournament, at almost all times, are incentivised to play their best to gain positions.
+
+Players are extremely rarely in a scenario where poor play does not hurt their ranking.
 
 ### MERS pays more attention to longer tournaments
 
@@ -177,7 +186,7 @@ In fact, almost all countries only use MERS (if at all) twice every three years,
 ### Even MERS's intricate systems sometimes don't function as expected
 
 ​
-While admittedly edge cases, there are times where the selection of results for part A and part B can generate scores which are not the highest possible.
+While admittedly edge cases, there are times where the selection of results for part A and part B can generate rankings which are not the highest possible.
 ​
 
 Consider a player with these contrived results:
@@ -229,6 +238,14 @@ We generally want to make it attractive to our players to play as many tournamen
 By promising to highlight a player's achievements and forgive occasional spots of bad luck, we encourage our players to keep chasing to better their skills.
 ​
 
+### Keep: letting almost all play affect the ranking
+
+We want UK players to be incentivised to play their best at all times.
+
+Even a player in the lower reaches of a tournament table should be rewarded if they play to their fullest ability to improve their standing.
+
+It is for this reason that we reject systems which only consider the 'top X results' in a player portfolio (where X is small).
+
 ### Keep: paying more attention to longer tournaments
 
 ​
@@ -244,7 +261,7 @@ MERS is often interested in how many tournaments you have attended.
 
 But each tournament has a different length. A fixed number of tournaments can represent varying amounts of play. This leads to some of the unusual results described above.
 
-Instead, RUKRS is interested in how many hanchan you have played. This is expressed either as the actual number of hanchan, or the number of days of tournament play you have completed (which is very similar).
+Instead, RUKRS is interested in how many _days of tournament play_ you have completed.
 
 ### Change: Don't try to estimate opponent skill
 
@@ -262,19 +279,15 @@ Therefore, all tournaments count equally, and towards exactly one selection (per
 
 ## An explanation of RUKRS​
 
-Two options have been identified for RUKRS. Both are presented here.
-
 ### RUKRS results
 
-Upon completing a tournament, your performance is recorded as a set of results that contribute to your RUKRS ranking. These results are calculated based on one of two proposed methods:
+Upon completing a tournament, your performance is recorded as a set of results that contribute to your RUKRS ranking.
 
-| Metric              | Option 1 ('Days')               | Option 2 ('Hanchan')           |
-| ------------------- | ------------------------------- | ------------------------------ |
-| Quantity of results | Total number of tournament days | Total number of hanchan played |
-| Value of results    | MERS base score (0 to 1000)     | Average hanchan score          |
+The results have a value equal to the player's base rank (0 to 1000) at the tournament, as defined by MERS.
 
-Note for Option 2: individual hanchan results would not matter; only your average hanchan score for a whole tournament (in any case, EMA tournament results are only required to include the total score, not individual hanchan results, so this would not be easily trackable).
-​
+The key difference from MERS is that the results are unweighted.
+
+Instead, the result is **duplicated** a number of times equal to the **number of days** in the tournament.​
 
 ### Result decay
 
@@ -290,18 +303,11 @@ For example, selections for ERMC 2030 will not consider results achieved before 
 
 ### Minimum participation
 
+To give a representative ranking, RUKRS has a minimum participation of 10 days of tournament play.
 ​
-To give a representative ranking, RUKRS requests a **minimum participation**:
-
-|                       | Days    | Hanchan    |
-| --------------------- | ------- | ---------- |
-| Minimum participation | 10 days | 50 hanchan |
-
-Players who have not yet met these thresholds are given **placeholder results** until the minimum is reached. Placeholder results have a set value:
-
-|                          | Days | Hanchan |
-| ------------------------ | ---- | ------- |
-| Placeholder result value | 0    | -30,000 |
+Players with fewer than 10 days (and thus, 10 results) are given placeholder results until they have 10 results.
+​
+Each of these placeholder results has value 0 (corresponding to last place).
 
 ### The two parts of the RUKRS ranking
 
@@ -312,42 +318,36 @@ A player's RUKRS ranking is calculated in two parts.
 ### Part A - Your consistency
 
 ​
-Part A is the average of the top 90% of your results, rounded up.
+Part A is the average of the top 80% of your results, rounded up.
 ​
 
-For example, a player with between 50 and 59 results may ignore their lowest 5 results.
+For example, a player with between 10 and 14 results may ignore their lowest 2 results.
 ​
 
 ### Part B - Your achievements
 
-​
-Part B is the average of a quantity of your best results:
-
-|                            | Days | Hanchan |
-| -------------------------- | ---- | ------- |
-| \# best results for part B | 8    | 30      |
+Part B is the average of your 8 best results.
 
 ### The RUKRS ranking
 
-​
 A player's final RUKRS ranking is the average of their Part A and Part B.
 
 ## Worked example
 
 Consider a player with the following results:
 
-| Tournament length in days | Number of hanchan | MERS score | Average hanchan score |
-| ------------------------- | ----------------- | ---------- | --------------------- |
-| 3                         | 13                | 550        | +500                  |
-| 2                         | 9                 | 850        | +11500                |
-| 2                         | 7                 | 300        | -4000                 |
-| 3                         | 12                | 900        | +12000                |
-| 2                         | 8                 | 400        | -1000                 |
-| 1                         | 4                 | 600        | +1500                 |
+| Tournament length in days | MERS base rank |
+| ------------------------- | -------------- |
+| 3                         | 550            |
+| 2                         | 850            |
+| 2                         | 300            |
+| 3                         | 900            |
+| 2                         | 400            |
+| 1                         | 600            |
 
-Recall that each result is repeated the same number of times as there are days or hanchan in the tournament.
+Recall that each result is repeated the same number of times as there are days in the tournament.
 
-Following the 'days' option, the player's list of RUKRS results looks like this:
+Thus, the player's list of RUKRS results looks like this:
 
 | Result | Counts for Part A | Counts for Part B |
 | ------ | ----------------- | ----------------- |
@@ -362,18 +362,15 @@ Following the 'days' option, the player's list of RUKRS results looks like this:
 | 550    | Yes               | No                |
 | 400    | Yes               | No                |
 | 400    | Yes               | No                |
-| 300    | Yes               | No                |
+| 300    | No                | No                |
 | 300    | No                | No                |
 
 The top 8 results count for part B.
 
-The top 90% of results (rounded up) count for part A, that is, the bottom 10% (rounded down) don't count. This player has 13 results, so only the single worst result doesn't count.
-
-In the 'hanchan' option, each average hanchan score would be repeated the number of times as there were hanchan in the tournament. Since this player has played 53 hanchan, part A would be the average of the top (90% \* 53) = 48 results.
+The top 80% of results (rounded up) count for part A, that is, the bottom 20% (rounded down) don't count. This player has 13 results, so the two worst results don't count.
 
 The calculations have the following results:
 
-| Option  | Part A counted results | Part B counted results | Part A | Part B | RUKRS score |
-| ------- | ---------------------- | ---------------------- | ------ | ------ | ----------- |
-| Days    | 12                     | 8                      | 645.83 | 762.5  | 704.17      |
-| Hanchan | 48                     | 30                     | +5083  | +8533  | +6808       |
+| Part A | Part B | RUKRS ranking |
+| ------ | ------ | ------------- |
+| 645.83 | 762.5  | 704.17        |
